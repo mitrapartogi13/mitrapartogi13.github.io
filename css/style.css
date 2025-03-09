@@ -454,3 +454,25 @@ p {
 		height: 50px;
 	}
 }
+
+.navbar .brand {
+	display: flex;
+	align-items: center;
+}
+
+.navbar .brand img {
+	margin-right: 10px;
+	/* Menambahkan sedikit jarak antara gambar dan teks */
+}
+
+@media (max-width: 768px) {
+	.navbar .brand {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.navbar .brand img {
+		margin-bottom: 10px;
+		/* Jarak antara gambar dan teks pada mode mobile */
+	}
+}
