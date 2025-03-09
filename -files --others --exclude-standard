@@ -1,0 +1,189 @@
+[33mcommit 5f14df456a515f595f229ca9c8ac8aadf16f6805[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: mitrapartogi13 <mitrapartogi@gmail.com>
+Date:   Sun Mar 9 22:00:05 2025 +0700
+
+    simpan sbelum pull
+
+ index.html               | 9 [32m+++++[m[31m----[m
+ mitrapartogi13.github.io | 1 [31m-[m
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+[33mcommit 96e5d6188b856baa7070c3ab8bbfbbde744de0f3[m
+Author: mitrapartogi13 <mitrapartogi@gmail.com>
+Date:   Sun Mar 9 21:43:25 2025 +0700
+
+    tes
+
+ mitrapartogi13.github.io | 1 [32m+[m
+ 1 file changed, 1 insertion(+)
+
+[33mcommit 110a6f048a7e37c4c55556d9918f6530c89aceb2[m
+Author: mitrapartogi13 <mitrapartogi@gmail.com>
+Date:   Sun Mar 9 21:37:18 2025 +0700
+
+    Perbaikan foto navbar(2)
+
+ css/style.css | 22 [32m++++++++++++++++++++++[m
+ index.html    |  7 [32m+++++[m[31m--[m
+ 2 files changed, 27 insertions(+), 2 deletions(-)
+
+[33mcommit 22c11fe1a7cbc16f65fdbcfd30193472165cbe5a[m
+Author: mitrapartogi13 <mitrapartogi@gmail.com>
+Date:   Sun Mar 9 21:16:15 2025 +0700
+
+    Perbaikan tampilan foto navbar
+
+ css/style.css | 24 [32m++++++++++++++++++++++++[m
+ 1 file changed, 24 insertions(+)
+
+[33mcommit 873727440c4b4649206f1dc3ff5c8f5e362ae917[m
+Author: mitrapartogi13 <mitrapartogi@gmail.com>
+Date:   Sun Mar 9 20:50:35 2025 +0700
+
+    Coba lagi
+
+ {multi-page/css => css}/bootstrap.css                       |   0
+ {multi-page/css => css}/bootstrap.min.css                   |   0
+ {multi-page/css => css}/jquery.fancybox.css                 |   0
+ {multi-page/css => css}/style-single-page.css               |   0
+ {multi-page/css => css}/style.css                           |   0
+ {multi-page/css => css}/styleIE.css                         |   0
+ {multi-page/font => font}/LICENSE.txt                       |   0
+ {multi-page/font => font}/README.txt                        |   0
+ {multi-page/font => font}/config.json                       |   0
+ {multi-page/font => font}/css/animation.css                 |   0
+ {multi-page/font => font}/css/fontello-codes.css            |   0
+ {multi-page/font => font}/css/fontello-embedded.css         |   0
+ {multi-page/font => font}/css/fontello-ie7-codes.css        |   0
+ {multi-page/font => font}/css/fontello-ie7.css              |   0
+ {multi-page/font => font}/css/fontello.css                  |   0
+ {multi-page/font => font}/demo.html                         |   0
+ {multi-page/font => font}/font/fontello.eot                 | Bin
+ {multi-page/font => font}/font/fontello.svg                 |   0
+ {multi-page/font => font}/font/fontello.ttf                 | Bin
+ {multi-page/font => font}/font/fontello.woff                | Bin
+ halo.txt.txt                                                |   0
+ {multi-page/img => img}/c-.png                              | Bin
+ {multi-page/img => img}/c-lang.png                          | Bin
+ {multi-page/img => img}/codeforces.jpg                      | Bin
+ {multi-page/img => img}/codeforces2.png                     | Bin
+ {multi-page/img => img}/css.69a82c2d9e45c933a9cb.png        | Bin
+ {multi-page/img => img}/dr.png                              | Bin
+ {multi-page/img => img}/dummy.png                           | Bin
+ {multi-page/img => img}/eye.png                             | Bin
+ {multi-page/img => img}/facebook.png                        | Bin
+ {multi-page/img => img}/fancybox_sprite.png                 | Bin
+ {multi-page/img => img}/fotbar-barun.jpg                    | Bin
+ {multi-page/img => img}/fotbar-barun2.JPG                   | Bin
+ {multi-page/img => img}/foto-almet.jpg                      | Bin
+ {multi-page/img => img}/foto-depan-robotik.jpg              | Bin
+ {multi-page/img => img}/foto-formal.JPG                     | Bin
+ {multi-page/img => img}/foto-nlc1 (1).jpg                   | Bin
+ {multi-page/img => img}/foto-nlc2.jpg                       | Bin
+ {multi-page/img => img}/github-barun.png                    | Bin
+ {multi-page/img => img}/github.png                          | Bin
+ {multi-page/img => img}/github2.png                         | Bin
+ {multi-page/img => img}/gmail.png                           | Bin
+ {multi-page/img => img}/go.png                              | Bin
+ {multi-page/img => img}/html.2ba4fabc69a89a8f71e6.png       | Bin
+ {multi-page/img => img}/instagram.png                       | Bin
+ {multi-page/img => img}/javascript.1ccd6ef9bb1f9c84ef00.png | Bin
+ {multi-page/img => img}/letter-c.png                        | Bin
+ {multi-page/img => img}/linkedin.png                        | Bin
+ {multi-page/img => img}/mini.psd                            | Bin
+ {multi-page/img => img}/pin.png                             | Bin
+ {multi-page/img => img}/python-lang.png                     | Bin
+ {multi-page/img => img}/python.png                          | Bin
+ {multi-page/img => img}/sertif_barun.jpg                    | Bin
+ {multi-page/img => img}/sertif_nlc.jpg                      | Bin
+ {multi-page/img => img}/social (1).png                      | Bin
+ {multi-page/img => img}/st.png                              | Bin
+ {multi-page/img => img}/tw.png                              | Bin
+ {multi-page/img => img}/user-big.jpg                        | Bin
+ {multi-page/img => img}/user.jpg                            | Bin
+ {multi-page/img => img}/whatsapp.png                        | Bin
+ multi-page/index.html => index.html                         |   0
+ {multi-page/js => js}/bootstrap.js                          |   0
+ {multi-page/js => js}/bootstrap.min.js                      |   0
+ {multi-page/js => js}/jquery-1.10.1.min.js                  |   0
+ {multi-page/js => js}/jquery.fancybox.js                    |   0
+ multi-page/resume.html => resume.html                       |   0
+ multi-page/skills.html => skills.html                       |   0
+ multi-page/work.html => work.html                           |   0
+ 68 files changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit 6e9d6643042c6d67d105fba8c65883866f1ace51[m
+Author: mitrapartogi13 <mitrapartogi@gmail.com>
+Date:   Sun Mar 9 20:37:50 2025 +0700
+
+    Menambahkan first portfolio
+
+ halo.txt.txt                                       |    0
+ multi-page/css/bootstrap.css                       | 7326 [32m+++++++++++++++++++[m
+ multi-page/css/bootstrap.min.css                   | 7415 [32m++++++++++++++++++++[m
+ multi-page/css/jquery.fancybox.css                 |  282 [32m+[m
+ multi-page/css/style-single-page.css               |  353 [32m+[m
+ multi-page/css/style.css                           |  432 [32m++[m
+ multi-page/css/styleIE.css                         |   63 [32m+[m
+ multi-page/font/LICENSE.txt                        |   39 [32m+[m
+ multi-page/font/README.txt                         |   75 [32m+[m
+ multi-page/font/config.json                        |  104 [32m+[m
+ multi-page/font/css/animation.css                  |   85 [32m+[m
+ multi-page/font/css/fontello-codes.css             |   17 [32m+[m
+ multi-page/font/css/fontello-embedded.css          |   70 [32m+[m
+ multi-page/font/css/fontello-ie7-codes.css         |   17 [32m+[m
+ multi-page/font/css/fontello-ie7.css               |   28 [32m+[m
+ multi-page/font/css/fontello.css                   |   68 [32m+[m
+ multi-page/font/demo.html                          |  286 [32m+[m
+ multi-page/font/font/fontello.eot                  |  Bin [31m0[m -> [32m9216[m bytes
+ multi-page/font/font/fontello.svg                  |   27 [32m+[m
+ multi-page/font/font/fontello.ttf                  |  Bin [31m0[m -> [32m9048[m bytes
+ multi-page/font/font/fontello.woff                 |  Bin [31m0[m -> [32m5576[m bytes
+ multi-page/img/c-.png                              |  Bin [31m0[m -> [32m23890[m bytes
+ multi-page/img/c-lang.png                          |  Bin [31m0[m -> [32m34498[m bytes
+ multi-page/img/codeforces.jpg                      |  Bin [31m0[m -> [32m2454[m bytes
+ multi-page/img/codeforces2.png                     |  Bin [31m0[m -> [32m16054[m bytes
+ multi-page/img/css.69a82c2d9e45c933a9cb.png        |  Bin [31m0[m -> [32m16557[m bytes
+ multi-page/img/dr.png                              |  Bin [31m0[m -> [32m5542[m bytes
+ multi-page/img/dummy.png                           |  Bin [31m0[m -> [32m4187[m bytes
+ multi-page/img/eye.png                             |  Bin [31m0[m -> [32m3936[m bytes
+ multi-page/img/facebook.png                        |  Bin [31m0[m -> [32m6350[m bytes
+ multi-page/img/fancybox_sprite.png                 |  Bin [31m0[m -> [32m1362[m bytes
+ multi-page/img/fotbar-barun.jpg                    |  Bin [31m0[m -> [32m991549[m bytes
+ multi-page/img/fotbar-barun2.JPG                   |  Bin [31m0[m -> [32m1862406[m bytes
+ multi-page/img/foto-almet.jpg                      |  Bin [31m0[m -> [32m103733[m bytes
+ multi-page/img/foto-depan-robotik.jpg              |  Bin [31m0[m -> [32m46603[m bytes
+ multi-page/img/foto-formal.JPG                     |  Bin [31m0[m -> [32m1029731[m bytes
+ multi-page/img/foto-nlc1 (1).jpg                   |  Bin [31m0[m -> [32m72372[m bytes
+ multi-page/img/foto-nlc2.jpg                       |  Bin [31m0[m -> [32m91729[m bytes
+ multi-page/img/github-barun.png                    |  Bin [31m0[m -> [32m179360[m bytes
+ multi-page/img/github.png                          |  Bin [31m0[m -> [32m7649[m bytes
+ multi-page/img/github2.png                         |  Bin [31m0[m -> [32m40930[m bytes
+ multi-page/img/gmail.png                           |  Bin [31m0[m -> [32m7267[m bytes
+ multi-page/img/go.png                              |  Bin [31m0[m -> [32m4895[m bytes
+ multi-page/img/html.2ba4fabc69a89a8f71e6.png       |  Bin [31m0[m -> [32m17980[m bytes
+ multi-page/img/instagram.png                       |  Bin [31m0[m -> [32m60380[m bytes
+ multi-page/img/javascript.1ccd6ef9bb1f9c84ef00.png |  Bin [31m0[m -> [32m10565[m bytes
+ multi-page/img/letter-c.png                        |  Bin [31m0[m -> [32m12735[m bytes
+ multi-page/img/linkedin.png                        |  Bin [31m0[m -> [32m11481[m bytes
+ multi-page/img/mini.psd                            |  Bin [31m0[m -> [32m196286[m bytes
+ multi-page/img/pin.png                             |  Bin [31m0[m -> [32m4612[m bytes
+ multi-page/img/python-lang.png                     |  Bin [31m0[m -> [32m92005[m bytes
+ multi-page/img/python.png                          |  Bin [31m0[m -> [32m37415[m bytes
+ multi-page/img/sertif_barun.jpg                    |  Bin [31m0[m -> [32m634884[m bytes
+ multi-page/img/sertif_nlc.jpg                      |  Bin [31m0[m -> [32m6713587[m bytes
+ multi-page/img/social (1).png                      |  Bin [31m0[m -> [32m26203[m bytes
+ multi-page/img/st.png                              |  Bin [31m0[m -> [32m4239[m bytes
+ multi-page/img/tw.png                              |  Bin [31m0[m -> [32m4210[m bytes
+ multi-page/img/user-big.jpg                        |  Bin [31m0[m -> [32m20910[m bytes
+ multi-page/img/user.jpg                            |  Bin [31m0[m -> [32m13827[m bytes
+ multi-page/img/whatsapp.png                        |  Bin [31m0[m -> [32m27018[m bytes
+ multi-page/index.html                              |  153 [32m+[m
+ multi-page/js/bootstrap.js                         | 2291 [32m++++++[m
+ multi-page/js/bootstrap.min.js                     |    7 [32m+[m
+ multi-page/js/jquery-1.10.1.min.js                 |    6 [32m+[m
+ multi-page/js/jquery.fancybox.js                   | 2020 [32m++++++[m
+ multi-page/resume.html                             |  138 [32m+[m
+ multi-page/skills.html                             |  177 [32m+[m
+ multi-page/work.html                               |  213 [32m+[m
+ 68 files changed, 21692 insertions(+)
