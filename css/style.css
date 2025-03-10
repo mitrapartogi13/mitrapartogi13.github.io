@@ -1,4 +1,4 @@
-/*This stylesheet contains some custom class rather than Bootstrap*/
+/* Responsive styles */
 
 a.brand img {
 	border-radius: 50%;
@@ -17,7 +17,7 @@ a.brand img {
 .work h2,
 .resume h2 {
 	font-weight: normal;
-	color: #39D084;
+	color: #39d084;
 }
 
 /***** Profile *****/
@@ -34,7 +34,7 @@ a.brand img {
 .profile p {
 	color: #fff;
 	font-size: 18px;
-	line-height: 35px;
+	line-height: 1.6;
 	margin-top: 30px;
 }
 
@@ -45,15 +45,16 @@ a.brand img {
 a.hire-me {
 	display: inline-block;
 	*display: inline;
-	padding: 20px 60px;
+	padding: 15px 40px;
 	background: #39d084;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 26px;
+	font-size: 22px;
 	margin: 20px 0;
 	-webkit-border-radius: 40px;
 	-moz-border-radius: 40px;
 	border-radius: 40px;
+	transition: background 0.3s ease;
 }
 
 a.hire-me:hover {
@@ -63,11 +64,15 @@ a.hire-me:hover {
 
 .social {
 	text-align: center;
-	padding-bottom: 80px;
+	padding-bottom: 60px;
 }
 
 ul.social-icons {
 	margin: 20px 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 ul.social-icons li {
@@ -82,6 +87,7 @@ ul.social-icons li:first-child {
 
 ul.social-icons li a {
 	opacity: 0.8;
+	transition: opacity 0.3s ease;
 }
 
 ul.social-icons li a:hover {
@@ -110,7 +116,7 @@ ul.social-icons li a:hover {
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	text-align: center;
-	border: 8px solid #203748;
+	border: 8px solid #000000;
 	float: right;
 	-webkit-transition: all 0.2s linear;
 	-moz-transition: all 0.2s linear;
@@ -170,7 +176,7 @@ ul.social-icons li a:hover {
 	height: 4px;
 	margin: 2px 0;
 	padding: 4px 0 4px 5px;
-	position: absolute;
+
 }
 
 .skills .span5 h3 {
@@ -292,13 +298,76 @@ ul.social-icons li a:hover {
 	}
 }
 
+.profile-container {
+	display: flex;
+	flex-direction: column;
+	/* Susun elemen secara vertikal */
+	align-items: center;
+	/* Tengah secara horizontal */
+	text-align: center;
+	/* Agar teks juga berada di tengah */
+	margin-top: 50px;
+	/* Beri jarak dari atas */
+}
+
+.profile-photo {
+	width: 150px;
+	/* Sesuaikan ukuran foto */
+	height: auto;
+	border-radius: 50%;
+	/* Opsional, kalau mau foto berbentuk lingkaran */
+	margin-bottom: 20px;
+	/* Beri jarak antara foto dan teks */
+}
+
+.photo-container {
+	position: relative;
+	width: 200px;
+	/* Sesuaikan dengan ukuran foto */
+	height: 250px;
+	/* Sesuaikan dengan ukuran foto */
+}
+
+.profile-photo {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+}
+
+.profile-photo.active {
+	opacity: 1;
+}
+
+@media screen and (max-width: 400px) {
+	.profile-photo {
+		max-width: 150px;
+		/* Lebih kecil di layar mobile */
+	}
+}
+
 /**** Work container *****/
+
+ul.work-images {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+}
 
 ul.work-images li {
 	list-style: none;
 	display: inline-block;
 	margin: 8px 10px;
-	background: #000000
+	background: #000000;
+	transition: transform 0.3s ease;
+}
+
+ul.work-images li:hover {
+	transform: scale(1.05);
 }
 
 ul.work-images li:first-child {
@@ -327,7 +396,7 @@ ul.work-images li img:hover {
 
 /***** Resume container *****/
 .resume h3 {
-	margin: 60px 0;
+	margin: 40px 0;
 }
 
 .resume .btn-center {
@@ -339,6 +408,7 @@ ul.work-images li img:hover {
 	position: fixed;
 	width: 100%;
 	bottom: 0;
+	z-index: 100;
 }
 
 .footer p {
@@ -348,10 +418,51 @@ ul.work-images li img:hover {
 .footer p a {
 	color: #fff;
 	text-decoration: none;
+	transition: color 0.3s ease;
 }
 
 .footer p a:hover {
 	color: #39d084;
+}
+
+/* Navbar utama */
+.navbar {
+	background-color: #000 !important;
+	/* Warna hitam */
+	padding: 10px 0;
+	/* Sesuaikan dengan resume.html */
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+/* Untuk responsif di layar kecil */
+@media (max-width: 768px) {
+	.navbar {
+		padding: 5px 0;
+		/* Sama seperti resume.html */
+	}
+
+	.navbar .nav {
+		display: block;
+		text-align: left;
+		padding-left: 0;
+	}
+
+	.navbar .nav>li {
+		display: block;
+		margin: 0;
+	}
+
+	.navbar .nav>li>a {
+		display: block;
+		padding: 10px 15px;
+		/* Padding yang sesuai */
+		font-size: 16px;
+		/* Sesuaikan ukuran teks */
+	}
 }
 
 /* Warna navbar saat menu aktif */
@@ -359,7 +470,6 @@ ul.work-images li img:hover {
 	background: #242424 !important;
 	/* Warna default */
 	transition: background 0.3s ease;
-
 }
 
 .navbar .nav li.active>a {
@@ -372,6 +482,8 @@ ul.work-images li img:hover {
 .navbar .nav li:not(.active):hover>a {
 	background: #39d084;
 	/* Warna hover */
+	border-radius: 20px;
+	transition: background 0.3s ease;
 }
 
 #particles-js {
@@ -383,8 +495,6 @@ ul.work-images li img:hover {
 	z-index: -1;
 	background: #000000;
 	pointer-events: none;
-
-
 }
 
 .justify-text {
@@ -395,22 +505,6 @@ ul.work-images li img:hover {
 p {
 	text-align: justify;
 	text-justify: inter-word;
-}
-
-
-/* untuk hp*/
-@media (max-width: 768px) {
-
-	.profile .span3,
-	.profile .span5 {
-		width: 100%;
-		float: none;
-		text-align: center;
-	}
-
-	.social-icons li {
-		margin: 5px;
-	}
 }
 
 .profile {
@@ -447,34 +541,9 @@ p {
 	/* Efek hover */
 }
 
-/* Responsive Mobile */
-@media (max-width: 768px) {
-	.navbar .brand img {
-		width: 50px;
-		height: 50px;
-	}
-}
-
 .navbar .brand {
 	display: flex;
 	align-items: center;
-}
-
-.navbar .brand img {
-	margin-right: 10px;
-	/* Menambahkan sedikit jarak antara gambar dan teks */
-}
-
-@media (max-width: 768px) {
-	.navbar .brand {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.navbar .brand img {
-		margin-bottom: 10px;
-		/* Jarak antara gambar dan teks pada mode mobile */
-	}
 }
 
 #changing-photo {
@@ -484,13 +553,15 @@ p {
 
 /* Tambahkan di CSS yang sudah ada */
 .photo-container {
-	position: relative;
-	width: 300px;
-	height: auto;
-	/* Agar menyesuaikan rasio gambar */
-	border-radius: 0;
-	/* Hilangkan border lingkaran */
-	overflow: visible;
+	display: flex;
+	flex-direction: column;
+	/* Susun elemen secara vertikal */
+	align-items: center;
+	/* Tengah secara horizontal */
+	text-align: center;
+	/* Agar teks juga berada di tengah */
+	margin-top: 50px;
+	/* Beri jarak dari atas */
 }
 
 .fade-image {
@@ -500,83 +571,583 @@ p {
 	width: 100%;
 	height: auto;
 	object-fit: cover;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.fade-image {
+	z-index: 10;
 }
 
 .fade-image.active {
 	opacity: 1;
 }
 
-/* Menyesuaikan ukuran gambar di halaman work, skills, dan resume */
-@media (max-width: 768px) {
-
-	/* Mengatur ulang ukuran gambar */
-	.work img,
-	.skills img,
-	.resume img {
-		width: 10px;
-		/* Mengecilkan gambar */
-		height: auto;
+/* Enhanced Responsive Styles */
+@media (max-width: 979px) {
+	.navbar .btn-navbar {
 		display: block;
-		margin: 5px auto;
 	}
 
-	/* Menyesuaikan padding dan margin agar lebih rapi */
-	.work,
-	.skills,
-	.resume {
+	.nav-collapse.collapse {
+		height: 0;
+		overflow: hidden;
+	}
+
+	.navbar .nav {
+		float: none;
+		margin: 0 0 10px;
+	}
+
+	.navbar .nav>li {
+		float: none;
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	.navbar .brand {
 		padding: 10px;
-		text-align: center;
-	}
-
-	/* Menyesuaikan ukuran teks agar lebih mudah dibaca */
-	.skills h2,
-	.work h2,
-	.resume h2 {
-		font-size: 1.0em;
-	}
-
-	.skills p,
-	.work p,
-	.resume p {
-		font-size: 1em;
-	}
-
-	/* Pastikan elemen tidak terlalu mepet di pinggir layar */
-	body {
-		padding: 5px;
 	}
 }
 
-/* Navbar Mobile Fixes */
 @media (max-width: 768px) {
-	.navbar-nav {
-		margin-top: 10px;
-		/* Jarak antara toggle dan menu */
+	body {
+		padding: 0 10px;
 	}
 
-	.navbar-toggler {
-		padding: 0.25rem 0.5rem;
-		/* Ukuran tombol toggle */
-		font-size: 1rem;
-		/* Ukuran ikon toggle */
+	.container {
+		width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
 	}
 
-	.navbar-collapse {
-		background-color: #242424;
-		/* Warna background menu mobile */
-		padding: 10px;
-		/* Padding untuk menu mobile */
+	.profile .span3,
+	.profile .span5,
+	.skills .span3,
+	.skills .span5,
+	.work .span8,
+	.resume .span8 {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		box-sizing: border-box;
 	}
 
-	.navbar-nav .nav-item {
-		margin: 5px 0;
-		/* Jarak antar item menu */
-	}
-
-	.navbar-nav .nav-link {
-		padding: 10px 15px;
-		/* Padding untuk link */
+	.profile {
 		text-align: center;
-		/* Posisi teks di tengah */
+	}
+
+	.profile p {
+		font-size: 16px;
+		line-height: 1.5;
+	}
+
+	.photo-container {
+		width: 250px;
+		margin: 0 auto 20px;
+	}
+
+	.navbar .brand img {
+		width: 50px;
+		height: 50px;
+	}
+
+	.navbar .brand {
+		flex-direction: row;
+		align-items: center;
+		padding: 10px 15px;
+	}
+
+	.navbar .nav li.active>a {
+		padding: 8px 15px;
+	}
+
+	a.hire-me {
+		padding: 12px 30px;
+		font-size: 18px;
+	}
+
+	ul.social-icons li {
+		margin: 5px;
+	}
+
+	ul.social-icons li img {
+		width: 40px;
+		height: 40px;
+	}
+
+	ul.work-images {
+		gap: 10px;
+	}
+
+	ul.work-images li {
+		margin: 5px;
+	}
+
+	ul.work-images li img {
+		width: 100%;
+		max-width: 200px;
+		height: auto;
+	}
+
+	.resume h3 {
+		margin: 30px 0;
+		font-size: 18px;
+	}
+
+
+
+	.photo-container {
+		margin-bottom: 20px;
+	}
+
+	.content {
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.profile h1 {
+		font-size: 24px;
+	}
+
+	.profile h3 {
+		font-size: 18px;
+	}
+
+	.profile p {
+		font-size: 14px;
+	}
+
+	.photo-container {
+		width: 200px;
+	}
+
+	a.hire-me {
+		padding: 10px 25px;
+		font-size: 16px;
+	}
+
+	.skills h2,
+	.work h2,
+	.resume h2 {
+		font-size: 22px;
+	}
+
+	ul.work-images li img {
+		max-width: 150px;
+	}
+
+	.resume h3 {
+		font-size: 16px;
+	}
+}
+
+/* Fix for navbar on mobile */
+@media (max-width: 768px) {
+	.navbar-inner .container {
+		position: relative;
+	}
+
+	.navbar .btn-navbar {
+		position: absolute;
+		right: 15px;
+		top: 15px;
+	}
+
+	.nav-collapse .nav {
+		margin-top: 15px;
+		background: rgba(36, 36, 36, 0.95);
+		border-radius: 8px;
+		padding: 10px;
+	}
+
+	.navbar .nav>li>a {
+		padding: 10px 15px;
+		display: block;
+		text-align: center;
+	}
+}
+
+/* Fix for skills section on mobile */
+@media (max-width: 768px) {
+
+	.skills .ps,
+	.skills .ai,
+	.skills .html,
+	.skills .css {
+		float: none;
+		margin: 0 auto 20px;
+		width: 80px;
+		height: 80px;
+		padding: 20px;
+	}
+
+	.skills .ps h3,
+	.skills .ai h3,
+	.skills .html h3,
+	.skills .css h3 {
+		font-size: 2.5em;
+		line-height: 60px;
+	}
+
+	.skills .html h3,
+	.skills .css h3 {
+		font-size: 1.8em;
+	}
+
+	.expand-bg {
+		max-width: 100%;
+	}
+}
+
+/* Ensure images in work section are responsive */
+.work-images img {
+	max-width: 100%;
+	height: auto;
+	transition: transform 0.3s ease;
+}
+
+/* Ensure particles.js works well on all devices */
+@media (max-width: 768px) {
+	#particles-js {
+		opacity: 0.5;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		background-color: #000 !important;
+	}
+
+	#particles-js {
+		background-color: #000 !important;
+
+	}
+}
+
+/* Aturan utama untuk container profile sudah menggunakan Flexbox */
+.container.profile {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	padding: 30px 0;
+}
+
+/* Foto dan konten secara default (desktop) */
+.container.profile .photo-container {
+	flex: 1 1 300px;
+	text-align: center;
+}
+
+.container.profile .photo-container img {
+	width: 100%;
+	height: auto;
+	max-width: 300px;
+	/* atur ukuran maksimal foto untuk desktop */
+	margin: 0 auto;
+}
+
+.container.profile .content {
+	flex: 1 1 300px;
+	color: #fff;
+	padding: 20px;
+	text-align: left;
+}
+
+
+
+/* Mengatur foto agar tanpa border/crop */
+.container.profile .photo-container img {
+	width: 100%;
+	height: auto;
+	max-width: 300px;
+	/* Sesuaikan jika diperlukan */
+	margin: 0 auto;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	object-fit: initial;
+}
+
+
+
+
+
+/* Mengatur foto agar tanpa border/crop */
+.container.profile .photo-container img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+
+
+.photo-container img {
+	width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	object-fit: contain;
+}
+
+/* Aturan deskripsi */
+.content {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+}
+
+
+/* Container Profil (Mobile-first) */
+.container.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 50px 0 30px;
+}
+
+
+.photo-container {
+	width: 5%;
+	max-width: 250px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.photo-container img {
+	width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	object-fit: contain;
+}
+
+.content {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+}
+
+
+/* Pada mobile, selain posisi tetap, ukuran foto akan disesuaikan secara responsif */
+@media (max-width: 768px) {
+	.photo-container {
+		width: 90%;
+		/* Tidak menggunakan nilai !important agar mengikuti container responsif */
+		margin-bottom: 20px;
+	}
+
+	.photo-container img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-width: 768px) {
+	.container.profile {
+		flex-direction: column !important;
+		/* Pastikan susunan berubah menjadi vertikal */
+		align-items: center !important;
+		text-align: center !important;
+	}
+
+	.photo-container {
+		order: -1 !important;
+		/* Mengatur foto agar muncul di atas teks */
+		width: 100% !important;
+		max-width: 300px !important;
+		margin-bottom: 20px !important;
+	}
+
+	.content {
+		width: 100% !important;
+		text-align: center !important;
+	}
+
+	.photo-container img {
+		width: 100% !important;
+		height: auto !important;
+		max-width: 300px !important;
+	}
+}
+
+/* Profile Section - Foto selalu di atas teks */
+.container.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 50px 0;
+}
+
+.photo-container {
+	width: 100%;
+	max-width: 250px;
+	/* Sesuaikan ukuran maksimal sesuai kebutuhan */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.photo-container img {
+	width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	object-fit: contain;
+}
+
+.content {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+}
+
+/* Opsional: Penyesuaian untuk layar yang sangat kecil */
+@media (max-width: 480px) {
+	.photo-container {
+		max-width: 200px;
+	}
+
+	.content {
+		font-size: 14px;
+	}
+}
+
+/* Profile Section – Always display photo above text */
+.container.profile {
+	display: flex;
+	flex-direction: column;
+	/* Always vertical order */
+	align-items: center;
+	gap: 20px;
+	padding: 50px 0;
+}
+
+.photo-container {
+	width: 90%;
+	/* Adjust as needed; uses 90% of the container width */
+	max-width: 250px;
+	/* Maximum width for the photo */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.photo-container img {
+	width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	object-fit: contain;
+}
+
+.content {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+}
+
+/* Optional adjustments for very small screens */
+@media (max-width: 480px) {
+	.photo-container {
+		max-width: 200px;
+	}
+
+	.content {
+		font-size: 14px;
+	}
+}
+
+/* Profile Section - Foto selalu di atas teks (Mobile-First) */
+.container.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	/* Mengurangi padding atas supaya foto berada lebih di atas */
+	padding: 20px 0 30px;
+}
+
+.photo-container {
+	width: 90%;
+	max-width: 250px;
+	text-align: center;
+	/* Menambah jarak bawah untuk memberikan break antara foto dan teks */
+	margin-bottom: 40px;
+}
+
+.photo-container img {
+	width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	object-fit: contain;
+}
+
+.content {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+	/* Menambah jarak atas agar terdapat break tambahan */
+	margin-top: 30px;
+}
+
+/* Opsional: Penyesuaian untuk layar yang sangat kecil */
+@media (max-width: 480px) {
+	.photo-container {
+		max-width: 200px;
+	}
+
+	.content {
+		font-size: 14px;
+	}
+}
+
+/* Profile Section - Photo Always Above Text (Mobile-First) */
+.container.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	padding: 50px 0;
+}
+
+.photo-container {
+	width: 90%;
+	max-width: 250px;
+	/* Sesuaikan jika diperlukan */
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.photo-container img {
+	width: 100%;
+	height: auto;
+	border: none;
+	border-radius: 0;
+	object-fit: contain;
+}
+
+.content {
+	width: 100%;
+	max-width: 800px;
+	text-align: center;
+}
+
+/* Optional adjustments for very small screens */
+@media (max-width: 480px) {
+	.photo-container {
+		max-width: 200px;
+	}
+
+	.content {
+		font-size: 14px;
 	}
 }

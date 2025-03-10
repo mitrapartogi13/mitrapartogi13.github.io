@@ -3,12 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Profile | Mitra Partogi</title>
+  <title>Mitra Partogi</title>
   <meta name="description" content="Flat Design Mini Portfolio">
   <meta name="keywords" content="responsive, bootstrap, flat design, flat ui, portfolio">
-  <meta name="author" content="Mitra">
+  <meta name="author" content="Dzyngiri">
   <meta name="description"
     content="This is a responsive flat design mini portfolio for creative folks who want to showcase their work online.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- styles -->
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -18,6 +19,77 @@
   <link rel="stylesheet" href="css/style.css">
   <!-- Particles Container -->
   <div id="particles-js"></div>
+  <style>
+    /* ---- NAVBAR UTAMA ---- */
+    .navbar {
+      background-color: #000;
+      margin: 0;
+      border-radius: 0;
+      border: none;
+      width: 100%;
+    }
+
+    /* Tambah padding di .navbar-inner atau di .nav>li>a */
+    .navbar .navbar-inner {
+      padding: 10px 0;
+      /* Ruang atas-bawah navbar */
+    }
+
+    .navbar .navbar-inner .container {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .navbar .nav {
+      float: none;
+      display: inline-block;
+    }
+
+    .navbar .nav>li {
+      float: none;
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    /* ---- MEDIA QUERY UNTUK MOBILE (max-width: 768px) ---- */
+    @media (max-width: 768px) {
+
+      /* Navbar tetap hitam dan melebar penuh */
+      .navbar {
+        background-color: #000 !important;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      .navbar .nav {
+        display: block;
+        text-align: left;
+        padding-left: 0;
+      }
+
+      .navbar .nav>li {
+        display: block;
+        margin: 0;
+      }
+
+      .navbar .nav>li>a {
+        display: block;
+        padding: 10px 15px;
+      }
+
+      body {
+        background-color: #000 !important;
+      }
+
+      #particles-js {
+        background-color: #000 !important;
+      }
+    }
+  </style>
+
 
 </head>
 
@@ -25,43 +97,43 @@
 
   <div class="navbar">
     <div class="navbar-inner">
-      <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
-            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-
-        <ul class="nav nav-collapse pull-right">
+      <div class="container">
+        <!-- Komentari atau hapus tombol hamburger -->
+        <!--
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        -->
+        <!-- Hapus class pull-right dan ganti nav-collapse -->
+        <ul class="nav">
           <li class="active"><a href="index.html"><i class="icon-user"></i> Profil </a></li>
           <li><a href="skills.html"><i class="icon-trophy"></i> Skill </a></li>
           <li><a href="work.html"><i class="icon-picture"></i> Pengalaman </a></li>
           <li><a href="resume.html"><i class="icon-doc-text"></i> CV </a></li>
         </ul>
-        <!-- Everything you want hidden at 940px or less, place within here -->
-        <div class="nav-collapse collapse">
-          <!-- .nav, .navbar-search, .navbar-form, etc -->
-        </div>
       </div>
     </div>
   </div>
   <!--Profile container-->
-  <div class="container profile">
-    <div class="span3 photo-container">
-      <img class="fade-image active" src="img/foto-almetfix1.jpg">
-      <img class="fade-image" src="img/foto-almetfix2.jpg">
+  <div class="profile-container">
+    <!-- Foto -->
+    <div class="photo-container">
+      <img class="profile-photo fade-image active" src="img/foto-almetfix1.jpg" alt="Foto 1">
+      <img class="profile-photo fade-image" src="img/foto-almetfix2.jpg" alt="Foto 2">
     </div>
-    <div class="span5">
-      <h1>Mitra Partogi</h1>
+    <!-- Deskripsi -->
+    <div class="content">
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <h1 style="color: #39d084"><b>Hi! I'm Mitra Partogi</h1>
       <h3>Informatics Engineering Student'2024</h3>
-      <p class="justify-text">Saya adalah mahasiswa semester 2 Program Studi Teknik Informatika, ITS. Saya tertarik
-        menjadi programmer yang
+      <p class="justify-text">
+        Saya adalah mahasiswa semester 2 Program Studi Teknik Informatika, ITS. Saya tertarik menjadi programmer yang
         andal di bidang pemrograman kompetitif, keamanan siber, dan pengembangan full-stack. Selain itu, saya memiliki
         minat yang besar dalam web development, terutama dalam membangun aplikasi web yang efisien, responsif, dan aman.
         Saya selalu berusaha untuk mengikuti perkembangan teknologi web terbaru, mulai dari frontend hingga backend,
         serta mengedepankan best practices dalam pengembangan aplikasi berbasis web.
-        <br> <br>
-        Sebagai seseorang yang antusias terhadap dunia digital, saya yakin bahwa web development adalah fondasi penting
-        dalam membangun solusi teknologi yang inovatif dan berdampak luas. Oleh karena itu, saya terus mengasah
-        keterampilan dalam teknologi seperti HTML, CSS, JavaScript, serta framework modern untuk menciptakan pengalaman
-        pengguna yang optimal.
-        <br>
       </p>
       <a href="img/whatsapp.png" class="hire-me"><i class="img/whatsapp.png"></i> Chat saya </a>
     </div>
@@ -90,11 +162,11 @@
   <!-- END: Social Icons -->
   <!-- Footer -->
   <!-- <div class="footer">
-      <div class="container">
-        <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a>
-        </p>
-      </div>
-    </div> -->
+    <div class="container">
+      <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a>
+      </p>
+    </div>
+  </div> -->
   <!-- Contact form in Modal -->
   <!-- Modal -->
   <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -115,53 +187,51 @@
     </div>
   </div>
   <!-- Scripts -->
-  <script src="http://code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery.js"></>
+      <script src="js/bootstrap.min.js"></script>
   <script>
-    $('#myModal').modal('hidden')
+                                                     $('#myModal').modal('hidden')
   </script>
   <!-- Particles.js -->
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      setTimeout(function () {
-        particlesJS('particles-js', {
-          particles: {
-            number: { value: 150 },
-            color: { value: '#39d084' },
-            shape: { type: 'circle' },
-            opacity: { value: 0.5 },
-            size: { value: 3 },
-            line_linked: {
-              enable: true,
-              color: '#39d084',
-              opacity: 0.4
-            },
-            move: { speed: 6 }
-          },
-          interactivity: {
-            events: {
-              onhover: { enable: true, mode: 'repulse' },
-              onclick: { enable: true, mode: 'push' }
-            }
-          }
-        });
-      }, 100);
+                                                     document.addEventListener("DOMContentLoaded", function () {
+                                                       setTimeout(function () {
+                                                         particlesJS('particles-js', {
+                                                           particles: {
+                                                             number: { value: 150 },
+                                                             color: { value: '#39d084' },
+                                                             shape: { type: 'circle' },
+                                                             opacity: { value: 0.5 },
+                                                             size: { value: 3 },
+                                                             line_linked: {
+                                                               enable: true,
+                                                               color: '#39d084',
+                                                               opacity: 0.4
+                                                             },
+                                                             move: { speed: 6 }
+                                                           },
+                                                           interactivity: {
+                                                             events: {
+                                                               onhover: { enable: true, mode: 'repulse' },
+                                                               onclick: { enable: true, mode: 'push' }
+                                                             }
+                                                           }
+                                                         });
+                                                       }, 100);
     });
   </script>
-  <!-- Letakkan ini SEBELUM-->
+  <!-- -->
   <script>
-    const photos = document.querySelectorAll('.fade-image');
-    let currentPhoto = 0;
+                                                     const photos = document.querySelectorAll('.fade-image');
+                                                     let currentPhoto = 0;
 
     setInterval(() => {
-      photos[currentPhoto].classList.remove('active');
-      currentPhoto = (currentPhoto + 1) % photos.length;
-      photos[currentPhoto].classList.add('active');
+                                                       photos[currentPhoto].classList.remove('active');
+                                                     currentPhoto = (currentPhoto + 1) % photos.length;
+                                                     photos[currentPhoto].classList.add('active');
     }, 3000);
   </script>
-
-</body>
 
 </body>
 

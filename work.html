@@ -10,25 +10,23 @@
   <meta name="author" content="Mitra">
   <meta name="description"
     content="This is a responsive flat design mini portfolio for creative folks who want to showcase their work online.">
+
   <!-- styles -->
   <link href="css/bootstrap.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="font/css/fontello.css" rel="stylesheet">
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
   <!-- scripts -->
-  <!-- Add jQuery library -->
   <script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-  <!-- Add fancyBox main JS and CSS files -->
   <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
   <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
   <script>
     $(document).ready(function () {
       $(".fancybox-thumb").fancybox({
         helpers: {
-          title: {
-            type: 'inside'
-          },
+          title: { type: 'inside' },
           overlay: {
             css: {
               'background': 'rgba(1,1,1,0.65)'
@@ -39,26 +37,92 @@
     });
   </script>
 
+  <style>
+    /* ---- NAVBAR UTAMA ---- */
+    .navbar {
+      background-color: #000;
+      margin: 0;
+      border-radius: 0;
+      border: none;
+      width: 100%;
+    }
+
+    /* Tambah padding di .navbar-inner atau di .nav>li>a */
+    .navbar .navbar-inner {
+      padding: 10px 0;
+      /* Ruang atas-bawah navbar */
+    }
+
+    .navbar .navbar-inner .container {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .navbar .nav {
+      float: none;
+      display: inline-block;
+    }
+
+    .navbar .nav>li {
+      float: none;
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    /* ---- MEDIA QUERY UNTUK MOBILE (max-width: 768px) ---- */
+    @media (max-width: 768px) {
+
+      /* Navbar tetap hitam dan melebar penuh */
+      .navbar {
+        background-color: #000 !important;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+      }
+
+      .navbar .nav {
+        display: block;
+        text-align: left;
+        padding-left: 0;
+      }
+
+      .navbar .nav>li {
+        display: block;
+        margin: 0;
+      }
+
+      .navbar .nav>li>a {
+        display: block;
+        padding: 10px 15px;
+      }
+
+      body {
+        background-color: #000 !important;
+      }
+
+      #particles-js {
+        background-color: #000 !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <div class="navbar">
     <div class="navbar-inner">
-      <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span
-            class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-        <ul class="nav nav-collapse pull-right">
-          <li><a href="index.html"><i class="icon-user"></i> Profil </a></li>
-          <li><a href="skills.html"><i class="icon-trophy"></i> Skill </a></li>
-          <li><a class="active" href="work.html"><i class="icon-picture"></i> Pengalaman </a></li>
-          <li><a href="resume.html"><i class="icon-doc-text"></i> CV </a></li>
+      <div class="container">
+        <ul class="nav">
+          <li><a href="index.html"><i class="icon-user"></i> Profil</a></li>
+          <li><a href="skills.html"><i class="icon-trophy"></i> Skill</a></li>
+          <li><a class="active" href="work.html"><i class="icon-picture"></i> Pengalaman</a></li>
+          <li><a href="resume.html"><i class="icon-doc-text"></i> CV</a></li>
         </ul>
-        <!-- Everything you want hidden at 940px or less, place within here -->
-        <div class="nav-collapse collapse">
-          <!-- .nav, .navbar-search, .navbar-form, etc -->
-        </div>
       </div>
     </div>
   </div>
+
   <!--Profile container-->
   <div class="container profile">
     <div class="row">
@@ -69,114 +133,80 @@
         <div class="container work">
           <ul class="work-images">
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/fotbar-barun.jpg" title="Image 01"><img
-                    src="img/fotbar-barun.jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/fotbar-barun.jpg" title="Image 01">
+                  <img src="img/fotbar-barun.jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/sertif_barun.jpg"><img
-                    src="img/sertif_barun.jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a>
-              </div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/sertif_barun.jpg">
+                  <img src="img/sertif_barun.jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/fotbar-barun2.JPG"><img
-                    src="img/fotbar-barun2.JPG" style="width: 250px; height: 200px; object-fit: cover;" /></a>
-              </div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/fotbar-barun2.JPG">
+                  <img src="img/fotbar-barun2.JPG" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
             </li>
           </ul>
-          <!--Dummy images by The Fox And King :: http://dribbble.com/snootyfox-->
         </div>
+
         <p>Barunastra ITS adalah tim pengembangan roboboat yang berfokus pada pengembangan kapal tanpa awak untuk
-          mendorong kemajuan teknologi maritim. Tim ini juga menjalankan kampanye "Save Our Ocean", yang bertujuan
-          untuk meningkatkan kesadaran dan edukasi masyarakat mengenai pentingnya ekosistem laut serta upaya
-          pelestarian keanekaragaman hayati, khususnya di Indonesia.
-          <br> <br>
-          Di Barunastra ITS, saya magang di divisi Electrical-Programming dengan Sub Divisi Visual dan Kontrol yang
-          bertanggung jawab penuh
-          terhadap kontrol kapal, algoritma kapal, dan visi kapal itu sendiri.
-        </p>
+          mendorong kemajuan
+          teknologi maritim. Tim ini juga menjalankan kampanye “Save Our Ocean”, yang bertujuan untuk meningkatkan
+          kesadaran dan edukasi
+          masyarakat mengenai pentingnya ekosistem laut serta upaya pelestarian keanekaragaman hayati, khususnya di
+          Indonesia.</p>
       </div>
 
       <!-- Magang NLC  -->
-
       <div class="span8">
         <h1>Magang Schematics NLC 2024</h1>
         <div class="container work">
           <ul class="work-images">
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/foto-nlc1 (1).jpg" title="Image 01"><img
-                    src="img/foto-nlc1 (1).jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/foto-nlc1 (1).jpg" title="Image 01">
+                  <img src="img/foto-nlc1 (1).jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/sertif_nlc.jpg"><img
-                    src="img/sertif_nlc.jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a>
-              </div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/sertif_nlc.jpg">
+                  <img src="img/sertif_nlc.jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
             </li>
             <li>
-              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/foto-nlc2.jpg"><img src="img/foto-nlc2.jpg"
-                    style="width: 250px; height: 200px; object-fit: cover;" /></a>
-              </div>
+              <div><a class="fancybox-thumb" rel="fancybox-thumb" href="img/foto-nlc2.jpg">
+                  <img src="img/foto-nlc2.jpg" style="width: 250px; height: 200px; object-fit: cover;" /></a></div>
             </li>
           </ul>
-          <!--Dummy images by The Fox And King :: http://dribbble.com/snootyfox-->
         </div>
         <p>Schematics adalah salah satu acara terkemuka yang diselenggarakan oleh mahasiswa Program Studi Teknik
           Informatika ITS. Event ini
           berfokus pada kompetisi pemrograman dan logika, serta bertujuan untuk memperkenalkan inovasi dan perkembangan
           teknologi kepada
-          masyarakat melalui berbagai subevent yang diadakan.
-        </p>
+          masyarakat melalui berbagai subevent yang diadakan.</p>
       </div>
-
-
     </div>
   </div>
 
   <!-- Social Icons -->
   <div class="row social">
     <ul class="social-icons">
-      <li><a href="https://www.facebook.com/share/167BmeRPu1/" target="_blank"><img src="img/facebook.png"
-            alt="facebook" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
-      <li><a href="https://www.linkedin.com/in/mitra-partogi" target="_blank"><img src="img/linkedin.png" alt="linkedin"
-            style="width: 50px; height: 50px; object-fit: cover;"></a></li>
-      <li><a href="https://github.com/mitrapartogi13" target="_blank"><img src="img/github2.png" alt="github"
-            style="width: 50px; height: 50px; object-fit: cover;"></a></li>
-      <li><a href="mailto:mitrapartogi@gmail.com" target="_blank"><img src="img/gmail.png" alt="gmail"
-            style="width: 50px; height: 50px; object-fit: cover;"></a></li>
-      <li><a href="http://wa.me/6287765244864" target="_blank"><img src="img/whatsapp.png" alt="whatsapp"
-            style="width: 50px; height: 50px; object-fit: cover;"></a></li>
-      <li><a href="https://www.instagram.com/mitrapartogiii._/" target="_blank"><img src="img/instagram.png"
-            alt="Instagram" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
-      <li><a href="https://codeforces.com/profile/mitrapartogi13/" target="_blank"><img src="img/codeforces2.png"
-            alt="codeforces" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
+      <li><a href="https://www.facebook.com/share/167BmeRPu1/" target="_blank">
+          <img src="img/facebook.png" alt="facebook" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
+      <li><a href="https://www.linkedin.com/in/mitra-partogi" target="_blank">
+          <img src="img/linkedin.png" alt="linkedin" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
+      <li><a href="https://github.com/mitrapartogi13" target="_blank">
+          <img src="img/github2.png" alt="github" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
+      <li><a href="mailto:mitrapartogi@gmail.com" target="_blank">
+          <img src="img/gmail.png" alt="gmail" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
+      <li><a href="http://wa.me/6287765244864" target="_blank">
+          <img src="img/whatsapp.png" alt="whatsapp" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
+      <li><a href="https://www.instagram.com/mitrapartogiii._/" target="_blank">
+          <img src="img/instagram.png" alt="Instagram" style="width: 50px; height: 50px; object-fit: cover;"></a></li>
+      <li><a href="https://codeforces.com/profile/mitrapartogi13/" target="_blank">
+          <img src="img/codeforces2.png" alt="codeforces" style="width: 50px; height: 50px; object-fit: cover;"></a>
+      </li>
     </ul>
   </div>
   <!-- END: Social Icons -->
+
   <div id="particles-js"></div>
-  <!-- Footer -->
-  <!-- <div class="footer">
-    <div class="container">
-      <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a>
-      </p>
-    </div>
-  </div> -->
-  <!-- Contact form in Modal -->
-  <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-    aria-hidden="true">
-    <div class="modal-header">
-      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-      <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
-    </div>
-    <div class="modal-body">
-      <form>
-        <input type="text" placeholder="Yopur Name">
-        <input type="text" placeholder="Your Email">
-        <input type="text" placeholder="Website (Optional)">
-        <textarea rows="3" style="width:80%"></textarea>
-        <br />
-        <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
-      </form>
-    </div>
-  </div>
+
   <!-- Scripts -->
   <script src="js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
