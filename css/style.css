@@ -476,3 +476,32 @@ p {
 		/* Jarak antara gambar dan teks pada mode mobile */
 	}
 }
+
+#changing-photo {
+	transition: opacity 0.5s ease-in-out;
+	position: relative;
+}
+
+/* Tambahkan di CSS yang sudah ada */
+.photo-container {
+	position: relative;
+	width: 300px;
+	height: auto;
+	/* Agar menyesuaikan rasio gambar */
+	border-radius: 0;
+	/* Hilangkan border lingkaran */
+	overflow: visible;
+}
+
+.fade-image {
+	position: absolute;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.fade-image.active {
+	opacity: 1;
+}
