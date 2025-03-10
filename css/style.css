@@ -322,6 +322,7 @@ ul.social-icons li a:hover {
 
 .photo-container {
 	position: relative;
+	z-index: 200;
 	width: 200px;
 	/* Sesuaikan dengan ukuran foto */
 	height: 250px;
@@ -427,7 +428,7 @@ ul.work-images li img:hover {
 
 /* Warna navbar saat menu aktif */
 .navbar {
-	position: relative;
+	position: fixed;
 	top: 0;
 }
 
