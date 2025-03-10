@@ -298,7 +298,7 @@ ul.work-images li {
 	list-style: none;
 	display: inline-block;
 	margin: 8px 10px;
-	background:
+	background: #000000
 }
 
 ul.work-images li:first-child {
@@ -504,4 +504,153 @@ p {
 
 .fade-image.active {
 	opacity: 1;
+}
+
+/* Menyesuaikan ukuran gambar di halaman work, skills, dan resume */
+@media (max-width: 768px) {
+
+	/* Mengatur ulang ukuran gambar */
+	.work img,
+	.skills img,
+	.resume img {
+		width: 10px;
+		/* Mengecilkan gambar */
+		height: auto;
+		display: block;
+		margin: 5px auto;
+	}
+
+	/* Menyesuaikan padding dan margin agar lebih rapi */
+	.work,
+	.skills,
+	.resume {
+		padding: 10px;
+		text-align: center;
+	}
+
+	/* Menyesuaikan ukuran teks agar lebih mudah dibaca */
+	.skills h2,
+	.work h2,
+	.resume h2 {
+		font-size: 1.0em;
+	}
+
+	.skills p,
+	.work p,
+	.resume p {
+		font-size: 1em;
+	}
+
+	/* Pastikan elemen tidak terlalu mepet di pinggir layar */
+	body {
+		padding: 5px;
+	}
+}
+
+/* Navbar Mobile Fixes */
+@media (max-width: 768px) {
+	.navbar-nav {
+		margin-top: 10px;
+		/* Jarak antara toggle dan menu */
+	}
+
+	.navbar-toggler {
+		padding: 0.25rem 0.5rem;
+		/* Ukuran tombol toggle */
+		font-size: 1rem;
+		/* Ukuran ikon toggle */
+	}
+
+	.navbar-collapse {
+		background-color: #242424;
+		/* Warna background menu mobile */
+		padding: 10px;
+		/* Padding untuk menu mobile */
+	}
+
+	.navbar-nav .nav-item {
+		margin: 5px 0;
+		/* Jarak antar item menu */
+	}
+
+	.navbar-nav .nav-link {
+		padding: 10px 15px;
+		/* Padding untuk link */
+		text-align: center;
+		/* Posisi teks di tengah */
+	}
+}
+
+/* Mobile Fixes */
+@media (max-width: 768px) {
+
+	/* Navbar */
+	.navbar-nav {
+		margin-top: 10px;
+	}
+
+	.navbar-toggler {
+		padding: 0.25rem 0.5rem;
+		font-size: 1rem;
+	}
+
+	.navbar-collapse {
+		background-color: #242424;
+		padding: 10px;
+	}
+
+	.navbar-nav .nav-item {
+		margin: 5px 0;
+	}
+
+	.navbar-nav .nav-link {
+		padding: 10px 15px;
+		text-align: center;
+	}
+
+	/* Skills Section */
+	.skills .span8 {
+		width: 100%;
+		text-align: center;
+	}
+
+	.work-images li {
+		display: block;
+		margin: 15px 0;
+		width: 100%;
+	}
+
+	.work-images li img {
+		width: 100%;
+		height: auto;
+	}
+
+	/* Social Icons */
+	.social-icons li {
+		margin: 5px;
+	}
+
+	/* Profile Section */
+	.profile h1 {
+		font-size: 1.8rem;
+	}
+
+	.profile h3 {
+		font-size: 1.2rem;
+	}
+
+	.profile p {
+		font-size: 1rem;
+		line-height: 1.6;
+	}
+
+	.photo-container {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	.fade-image {
+		width: 100%;
+		height: auto;
+	}
 }
