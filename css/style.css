@@ -425,47 +425,12 @@ ul.work-images li img:hover {
 	color: #39d084;
 }
 
-/* Navbar utama */
-.navbar {
-	background-color: #000 !important;
-	/* Warna hitam */
-	padding: 10px 0;
-	/* Sesuaikan dengan resume.html */
-	width: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 1000;
-}
-
-/* Untuk responsif di layar kecil */
-@media (max-width: 768px) {
-	.navbar {
-		padding: 5px 0;
-		/* Sama seperti resume.html */
-	}
-
-	.navbar .nav {
-		display: block;
-		text-align: left;
-		padding-left: 0;
-	}
-
-	.navbar .nav>li {
-		display: block;
-		margin: 0;
-	}
-
-	.navbar .nav>li>a {
-		display: block;
-		padding: 10px 15px;
-		/* Padding yang sesuai */
-		font-size: 16px;
-		/* Sesuaikan ukuran teks */
-	}
-}
-
 /* Warna navbar saat menu aktif */
+.navbar {
+	position: relative;
+	top: 0;
+}
+
 .navbar-inner {
 	background: #242424 !important;
 	/* Warna default */
