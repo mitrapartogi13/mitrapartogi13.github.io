@@ -428,7 +428,7 @@ ul.work-images li img:hover {
 
 /* Warna navbar saat menu aktif */
 .navbar {
-	position: fixed;
+	position: relative;
 	top: 0;
 }
 
