@@ -207,6 +207,8 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .project-card {
