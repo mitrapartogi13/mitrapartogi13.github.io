@@ -22,9 +22,10 @@
         // --- KODE BARU UNTUK EFEK TYPING ---
             const professionElement = document.querySelector('.profession');
             const professions = [
+                "Informatics Student at ITS",
                 "Web Developer",
                 "Competitive Programmer",
-                "Informatics Student at ITS",
+                
             ];
             let professionIndex = 0;
             let charIndex = 0;
