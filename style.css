@@ -207,6 +207,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            margin-bottom: 20px;
         }
 
         .project-card {
@@ -222,13 +223,64 @@
             box-shadow: 0 15px 30px rgba(187, 134, 252, 0.15);
         }
 
-        .project-card img {
+        /* .project-card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             display: block;
+        } */
+        /* --- CSS BARU UNTUK IMAGE SCROLLER --- */
+
+        /* 1. Penata Jendela (Viewport) */
+        .image-window {
+            width: 100%;
+            height: 200px; /* Sesuaikan tinggi sesuai desain Anda */
+            overflow: hidden; /* Ini adalah trik utamanya, menyembunyikan bagian gambar yang meluber */
         }
 
+        /* 2. Penata Rol Film (Kontainer Gambar) */
+        .image-scroller {
+            display: flex;
+            /* Memberi jarak 10px antar gambar dengan rapi */
+            gap: 10px; 
+            
+            /* Lebar = (Lebar gambar + gap) x Jumlah Total Gambar */
+            width: calc((300px + 10px) * 8); 
+            
+            height: 100%;
+            animation: scroll-anim 20s linear infinite;
+        }
+
+        /* 3. Penata Gambar di Dalam Scroller */
+        .image-scroller img {
+            width: 300px; /* Lebar tetap */
+            height: 100%;
+            object-fit: cover;
+            flex-shrink: 0;
+            
+        }
+
+        /* 4. [Opsional] Jeda Animasi Saat Kursor di Atas Kartu */
+        .project-card:hover .image-scroller {
+            animation-play-state: paused;
+        }
+
+
+        /* 5. Keyframes untuk Animasi Scroll */
+        @keyframes scroll-anim {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                /* Geser ke kiri sejauh lebar set gambar pertama */
+                /* Contoh: 4 gambar x 300px = 1200px */
+                transform: translateX(calc(-300px * 4));
+            }
+        }
+
+        .card-images {
+            border-radius: 20px;
+        }
         .project-content {
             padding: 1.5rem;
         }
