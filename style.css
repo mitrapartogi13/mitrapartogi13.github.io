@@ -309,7 +309,10 @@
                 padding: 1rem;
                 border-radius: 5px;
             }
-
+            
+            p {
+                font-size: 0.95rem;
+            }
             .navbar .container {
                 /* Atur agar logo tetap di kiri & ikon menu di kanan */
                 /* Untuk saat ini kita biarkan sederhana */
