@@ -23,7 +23,7 @@
             const professionElement = document.querySelector('.profession');
             const professions = [
                 "Web Developer",
-                "Competitive Programming Enthusiast",
+                "Competitive Programmer",
                 "Informatics Student at ITS",
             ];
             let professionIndex = 0;
