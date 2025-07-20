@@ -30,7 +30,7 @@
             let charIndex = 0;
             let isDeleting = false;
 
-            const typeSpeed = 130; // Kecepatan mengetik (ms)
+            const typeSpeed = 110; // Kecepatan mengetik (ms)
             const eraseSpeed = 60; // Kecepatan menghapus (ms)
             const delay = 1000; // Jeda setelah selesai mengetik satu kata
 

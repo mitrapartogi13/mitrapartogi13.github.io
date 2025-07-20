@@ -1,4 +1,9 @@
 /* --- General Styling & Variables --- */
+
+        html {
+            scroll-padding-top: 70.39px; 
+            scroll-behavior: smooth;
+        }
         :root {
             --primary-color: #BB86FC;
             --secondary-color: #03DAC6;
@@ -62,7 +67,7 @@
             z-index: 1000;
             transition: background 0.3s;
         }
-
+        
         .navbar .container {
             display: flex;
             justify-content: space-between;
@@ -130,7 +135,7 @@
             display: flex;
             align-items: center;
             text-align: center;
-            background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(50, 50, 50, 0.8)), no-repeat center center/cover;
+            background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(40, 40, 40, 0.8)), no-repeat center center/cover;
             /* background: linear-gradient(135deg, rgba(18, 18, 18, 0.95), rgba(40, 40, 40, 0.8)), url('https://www.istockphoto.com/photo/colorful-light-abstract-background-for-backdrop-and-copy-space-abstract-dark-gm1201994146-344903855?utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fabstract-drk&utm_medium=affiliate&utm_source=unsplash&utm_term=abstract+drk%3A%3A%3A') no-repeat center center/cover; */
 
         }
