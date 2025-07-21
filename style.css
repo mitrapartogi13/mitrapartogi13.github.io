@@ -175,6 +175,37 @@
             margin: auto;
         }
 
+       .name-masked {
+        position: relative; /* Diperlukan agar pseudo-element bisa diposisikan */
+        display: inline-block;
+        cursor: pointer;
+
+        /* LAPISAN BAWAH (DEFAULT): Ini adalah teks putih solid yang terlihat pertama kali */
+        color: var(--text-color); 
+        }
+
+        /* LAPISAN ATAS (TERSEMBUNYI): Ini adalah lapisan gradasi yang akan kita 'ungkap' */
+        .name-masked::before {
+        content: attr(data-text); /* Mengambil teks dari atribut 'data-text' */
+        position: absolute;
+        top: 0;
+        left: 0;
+    
+
+        /* Membuat lapisan ini memiliki warna gradasi */
+        background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; /* Teksnya transparan agar background terlihat */
+
+        /* INI KUNCINYA: Membuat 'topeng' yang akan menampilkan lapisan ini */
+        /* Lingkaran solid akan MENAMPILKAN lapisan ini, area transparan akan MENYEMBUNYIKANNYA */
+        -webkit-mask-image: radial-gradient(circle 50px at var(--x, -100px) var(--y, -100px), black 100%, transparent 50%);
+        mask-image: radial-gradient(circle 50px at var(--x, -100px) var(--y, -100px), black 100%, transparent 50%);
+        }
+
+        
+
         /* --- Experience Section --- */
 
 

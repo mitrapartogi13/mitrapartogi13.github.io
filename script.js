@@ -17,6 +17,29 @@
             sections.forEach(section => {
                 observer.observe(section);
             });
+
+
+
+            const nameElement = document.querySelector('.name-masked');
+
+            if (nameElement) {
+                nameElement.addEventListener('mousemove', (e) => {
+                    // Menghitung posisi kursor relatif terhadap elemen nama
+                    const rect = nameElement.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    // Mengupdate variabel CSS '--x' dan '--y' secara real-time
+                    nameElement.style.setProperty('--x', `${x}px`);
+                    nameElement.style.setProperty('--y', `${y}px`);
+                });
+
+                // Mengembalikan posisi mask ke luar layar saat kursor meninggalkan elemen
+                nameElement.addEventListener('mouseleave', () => {
+                    nameElement.style.setProperty('--x', '-100px');
+                    nameElement.style.setProperty('--y', '-100px');
+                });
+            }
         });
 
         // --- KODE BARU UNTUK EFEK TYPING ---
